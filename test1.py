@@ -2,18 +2,24 @@ import random
 dict={"r":"🪨", "p":"📃", "s":"✂️"}
 list=("r","p","s")
 
-User_choice=input("Enter your choice(r/p/s):").lower()
-Computer_Choice=random.choice(list)
+while True:
+        User_choice=input("Enter your choice(r/p/s):").lower()
+        Computer_Choice=random.choice(list)
 
-print("Your choice:",dict[User_choice])
-print("Computer's choice:",dict[Computer_Choice])
+        print("Your choice:",dict[User_choice])
+        print("Computer's choice:",dict[Computer_Choice])
 
-if (User_choice=="r" and Computer_Choice=="s" or User_choice=="p"and Computer_Choice=="r" or User_choice=="s" and Computer_Choice=="p"):
-        print("You won!😎")
-elif (User_choice=="r" and Computer_Choice=="r" or User_choice=="p"and Computer_Choice=="p" or User_choice=="s" and Computer_Choice=="s"):
-        print("The match was draw!✌️")
-else:
-        print("You Lost!🤭")
+        if (User_choice=="r" and Computer_Choice=="s" or User_choice=="p"and Computer_Choice=="r" or User_choice=="s" and Computer_Choice=="p"):
+                print("You won!😎")
+        elif (User_choice=="r" and Computer_Choice=="r" or User_choice=="p"and Computer_Choice=="p" or User_choice=="s" and Computer_Choice=="s"):
+                print("The match was draw!✌️")
+        else:
+                print("You Lost!🤭")
+
+        ask=input("Do you want to continue(y/n)?:")
+
+        if ask!="y":
+                break
 
 print('Thank for playing 🙏')
      
