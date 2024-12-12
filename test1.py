@@ -5,6 +5,9 @@ list=("r","p","s")
 while True:
         User_choice=input("Enter your choice(r/p/s):").lower()
         Computer_Choice=random.choice(list)
+        
+        while User_choice not in list:
+                User_choice=input("Invalid output! Please enter your choice again (r/p/s):").lower()
 
         print("Your choice:",dict[User_choice])
         print("Computer's choice:",dict[Computer_Choice])
@@ -17,6 +20,9 @@ while True:
                 print("You Lost!🤭")
 
         ask=input("Do you want to continue(y/n)?:")
+
+        while ask not in ["y","n"]:
+                ask=input("Invalid input! Do you want to continue(y/n)?:")
 
         if ask!="y":
                 break
